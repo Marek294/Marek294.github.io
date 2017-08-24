@@ -14,6 +14,12 @@
       <div class="container-fluid">
         <ul class="nav justify-content-center">
           <li class="nav-item">
+            <a class="nav-link active" href="#aboutMe">
+              <p>O mnie</p>
+              <div class="border-color"></div>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link active" href="#knowledge">
               <p>Umiejętności</p>
               <div class="border-color"></div>
@@ -190,19 +196,19 @@
     				<form class="container" id="needs-validation">
     					<div class="form-group">
     						<label for="inputName">Imię i nazwisko</label>
-    						<input type="name" class="form-control" id="inputName" required>
+    						<input type="name" class="form-control" id="inputName" name="name" required>
     					</div>
     					<div class="form-group">
     						<label for="inputEmail">Adres email</label>
-    						<input type="email" class="form-control" id="inputEmail" required>
+    						<input type="email" class="form-control" id="inputEmail" name="email" required>
     					</div>
     					<div class="form-group">
     						<label for="inputSubject">Temat</label>
-    						<input type="name" class="form-control" id="inputSubject">
+    						<input type="name" class="form-control" id="inputSubject" name="subject">
     					</div>
     					<div class="form-group">
     						<label for="inputArea">Wiadomość</label>
-    						<textarea class="form-control" id="inputArea" rows="3"></textarea>
+    						<textarea class="form-control" id="inputArea" rows="3" name="message"></textarea>
     					</div>
     					<button type="submit" class="btn btn-default">Send Message</button>
     				</form>

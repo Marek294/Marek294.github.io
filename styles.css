@@ -48,12 +48,17 @@ min-height: 100vh;
   color: #E74C3C;
 }
 
-.nav {
+.header {
   border-bottom: 1px solid rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #4C4C4D;
+  z-index: 5;
 }
 
 .nav-item p {
-  color: #4C4C4D;
+  color: #ffffff;
   font-size: 20px;
   margin-bottom: 0px;
   font-weight: 700;
@@ -194,6 +199,7 @@ min-height: 100vh;
 }
 
 #contact textarea {
+  color: rgba(0,0,0,0.4);
   border: none;
   border-radius: 0px;
   border-bottom: 2px solid rgba(0,0,0,0.4);

@@ -3,7 +3,7 @@ $(document).ready(function() {
     .not('[href="#"]')
     .not('[href="#0"]')
     .click(function(event) {
-      var target = $(this.hash).children();
+      var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       console.log(target);
       if (target.length) {
@@ -12,6 +12,16 @@ $(document).ready(function() {
           scrollTop: target.offset().top
         }, 1000, "swing");
       }
+    });
+
+    $("#needs-validation").submit(function(e){
+        e.preventDefault();
+        var link = "mailto:Markra5835@gmail.com"
+             + "?cc="+escape(document.getElementById('inputEmail').value)
+             + "&subject=" + escape(document.getElementById('inputSubject').value)
+             + "&body=" + document.getElementById('inputArea').value;
+
+        window.location.href = link;
     });
 
     $window.on('scroll resize', checkIfInView);
