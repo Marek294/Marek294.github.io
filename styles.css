@@ -76,7 +76,7 @@ min-height: 100vh;
 }
 
 #aboutMe {
-  height: 100vh;
+  min-height: 100vh;
   color: #4C4C4D;
   border-bottom: 1px solid #CCCCCC;
 }
@@ -94,6 +94,7 @@ min-height: 100vh;
 
 #knowledge {
   border-bottom: 1px solid #CCCCCC;
+  min-height: 100vh;
 }
 
 #knowledge .row {
@@ -114,6 +115,7 @@ min-height: 100vh;
   justify-content: space-around;
   flex-direction: column;
   border-bottom: 1px solid #CCCCCC;
+  min-height: 100vh;
 }
 
 #projects .row {
@@ -141,6 +143,7 @@ min-height: 100vh;
 
 #contact {
   border-bottom: 1px solid #CCCCCC;
+  min-height: 100vh;
 }
 
 #contact .info {
