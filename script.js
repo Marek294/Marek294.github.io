@@ -36,6 +36,7 @@ function checkIfInView() {
     if ((elementBottomPosition >= windowTopPosition) &&
         (elementTopPosition <= windowBottomPosition)){
       if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
+        $element.css('animation-delay', Math.floor((Math.random() * 600) + 100).toString()+"ms");
         $element.addClass('animated flipInY');
       }
     } else {
@@ -68,15 +69,58 @@ function checkIfInView() {
 
   $.each($('.fade-animation'), function() {
     var $element = $(this);
-    var elementHeight = $element.outerHeight();
-    var elementTopPosition = $element.offset().top;
+    var $parent = $element.parent().parent();
+    var elementHeight = $parent.outerHeight();
+    var elementTopPosition = $parent.offset().top;
     var elementBottomPosition = (elementTopPosition + elementHeight);
 
     if ((elementBottomPosition >= windowTopPosition) &&
         (elementTopPosition <= windowBottomPosition)){
-       $element.addClass('animated fadeIn');
+       if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
+         $element.addClass('animated fadeIn');
+       }
     } else {
-      //$element.removeClass('animated fadeIn');
+      if($element[0].className.split(/\s+/).indexOf('animated') >= 0) {
+        $element.removeClass('animated fadeIn');
+      }
+    }
+  });
+
+  $.each($('.fadeLeft-animation'), function() {
+    var $element = $(this);
+    var $parent = $element.parent().parent();
+    var elementHeight = $parent.outerHeight();
+    var elementTopPosition = $parent.offset().top;
+    var elementBottomPosition = (elementTopPosition + elementHeight);
+
+    if ((elementBottomPosition >= windowTopPosition) &&
+        (elementTopPosition <= windowBottomPosition)){
+       if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
+         $element.addClass('animated fadeInLeft');
+       }
+    } else {
+      if($element[0].className.split(/\s+/).indexOf('animated') >= 0) {
+        $element.removeClass('animated fadeInLeft');
+      }
+    }
+  });
+
+  $.each($('.fadeRight-animation'), function() {
+    var $element = $(this);
+    var $parent = $element.parent().parent();
+    var elementHeight = $parent.outerHeight();
+    var elementTopPosition = $parent.offset().top;
+    var elementBottomPosition = (elementTopPosition + elementHeight);
+
+    if ((elementBottomPosition >= windowTopPosition) &&
+        (elementTopPosition <= windowBottomPosition)){
+       if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
+         $element.addClass('animated fadeInRight');
+       }
+    } else {
+      if($element[0].className.split(/\s+/).indexOf('animated') >= 0) {
+        $element.removeClass('animated fadeInRight');
+      }
     }
   });
 }
