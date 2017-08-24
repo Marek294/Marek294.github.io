@@ -76,7 +76,7 @@ min-height: 100vh;
 }
 
 #aboutMe {
-  height: 800px;
+  height: 100vh;
   color: #4C4C4D;
   border-bottom: 1px solid #CCCCCC;
 }
