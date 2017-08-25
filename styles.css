@@ -91,10 +91,19 @@ min-height: 100vh;
 }
 
 #aboutMe img {
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   box-shadow: 0px 0px 10px black;
+}
+
+#aboutMe h1 {
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+
+#aboutMe p {
+  font-weight: 900;
 }
 
 #knowledge {
@@ -144,6 +153,17 @@ min-height: 100vh;
 	-moz-filter: contrast(150%);
 	-o-filter: contrast(150%);
 	-ms-filter: contrast(150%);
+}
+
+#education {
+  border-bottom: 1px solid #CCCCCC;
+  min-height: 100vh;
+}
+
+#education .container .row {
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
 }
 
 #contact {
