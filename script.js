@@ -14,16 +14,6 @@ $(document).ready(function() {
       }
     });
 
-    // $("#needs-validation").submit(function(e){
-    //     e.preventDefault();
-    //     var link = "mailto:Markra5835@gmail.com"
-    //          + "?cc="+escape(document.getElementById('inputEmail').value)
-    //          + "&subject=" + escape(document.getElementById('inputSubject').value)
-    //          + "&body=" + document.getElementById('inputArea').value;
-    //
-    //     window.location.href = link;
-    // });
-
     $window.on('scroll resize', checkIfInView);
     $window.trigger('scroll');
 });
@@ -41,7 +31,6 @@ function checkIfInView() {
     var elementHeight = $parent.outerHeight();
     var elementTopPosition = $parent.offset().top;
     var elementBottomPosition = (elementTopPosition + elementHeight);
-    //console.log($(this).parent());
 
     if ((elementBottomPosition >= windowTopPosition) &&
         (elementTopPosition <= windowBottomPosition)){

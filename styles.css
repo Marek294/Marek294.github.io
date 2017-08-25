@@ -136,7 +136,7 @@ min-height: 100vh;
   margin-top: 50px;
 }
 
-#projects img {
+#projects .row img {
   height: 300px;
   width: 300px;
   filter: contrast(100%);
@@ -147,12 +147,29 @@ min-height: 100vh;
 	transition: filter 0.5s,-webkit-filter 0.5s,-moz-filter 0.5s,-o-filter 0.5s,-ms-filter 0.5s;
 }
 
-#projects img:hover {
+#projects .row img:hover {
   filter: contrast(150%);
 	-webkit-filter: contrast(150%);
 	-moz-filter: contrast(150%);
 	-o-filter: contrast(150%);
 	-ms-filter: contrast(150%);
+}
+
+#projects .more {
+  margin-top: 100px;
+  font-weight: 900;
+}
+
+#projects .more img {
+  width: 30px;
+}
+
+#projects .more a {
+  margin: 0px 10px 0px 10px;
+}
+
+#projects .more div {
+  width: 0px;
 }
 
 #education {
