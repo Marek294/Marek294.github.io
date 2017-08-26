@@ -80,10 +80,37 @@ min-height: 100vh;
   animation-delay: 3000ms;
 }
 
+@media screen and (min-width: 0px) {
+    body {
+        background-color: lightgreen;
+    }
+
+    #aboutMe {
+      flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    body {
+        background-color: #ffcccb;
+    }
+
+    #aboutMe {
+      flex-direction: row;
+    }
+}
+
 #aboutMe {
   min-height: 100vh;
   color: #4C4C4D;
   border-bottom: 1px solid #CCCCCC;
+
+  display: flex;
+}
+
+#aboutMe .about {
+  margin: 0px 20px 0px 20px;
+  width: 700px;
 }
 
 #aboutMe table {
