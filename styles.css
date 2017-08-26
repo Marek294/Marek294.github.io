@@ -129,12 +129,17 @@ min-height: 100vh;
   border-bottom: 1px solid #CCCCCC;
 }
 
-#knowledge .row {
-  margin-top: 20px;
+#knowledge .flexRow {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-#knowledge .col-2 {
-  max-width: 200px;
+#knowledge .flexCol {
+  margin: 20px 10px 20px 10px;
+  display: flex;
+  align-items: center;
 }
 
 #knowledge img {
