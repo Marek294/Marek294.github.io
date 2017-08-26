@@ -21,7 +21,7 @@ $(document).ready(function() {
 var $window = $(window);
 
 function checkIfInView() {
-  if ( $(window).width() > 600 ) {
+  if ( $(window).width() > 1200 ) {
     var windowHeight = $window.outerHeight();
     var windowTopPosition = $window.scrollTop();
     var windowBottomPosition = (windowTopPosition + windowHeight);
