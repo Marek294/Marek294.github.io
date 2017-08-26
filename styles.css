@@ -97,6 +97,7 @@ min-height: 100vh;
 
     #aboutMe {
       flex-direction: row;
+      min-height: 100vh;
     }
 }
 
@@ -109,7 +110,7 @@ min-height: 100vh;
 
 #aboutMe .about {
   margin: 0px 20px 0px 20px;
-  width: 700px;
+  max-width: 700px;
 }
 
 #aboutMe table {
@@ -156,11 +157,14 @@ min-height: 100vh;
   border-bottom: 1px solid #CCCCCC;
 }
 
-#projects .row {
+#projects .flexRow {
   margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-#projects .row img {
+#projects .flexRow img {
   filter: contrast(100%);
 	-webkit-filter: contrast(100%);
 	-moz-filter: contrast(100%);
@@ -169,12 +173,16 @@ min-height: 100vh;
 	transition: filter 0.5s,-webkit-filter 0.5s,-moz-filter 0.5s,-o-filter 0.5s,-ms-filter 0.5s;
 }
 
-#projects .row img:hover {
+#projects .flexRow img:hover {
   filter: contrast(150%);
 	-webkit-filter: contrast(150%);
 	-moz-filter: contrast(150%);
 	-o-filter: contrast(150%);
 	-ms-filter: contrast(150%);
+}
+
+#projects .flexCol {
+  margin: 10px 10px 10px 10px;
 }
 
 #projects .item {
