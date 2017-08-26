@@ -21,105 +21,107 @@ $(document).ready(function() {
 var $window = $(window);
 
 function checkIfInView() {
-  var windowHeight = $window.outerHeight();
-  var windowTopPosition = $window.scrollTop();
-  var windowBottomPosition = (windowTopPosition + windowHeight);
+  if ( $(window).width() > 600 ) {
+    var windowHeight = $window.outerHeight();
+    var windowTopPosition = $window.scrollTop();
+    var windowBottomPosition = (windowTopPosition + windowHeight);
 
-  $.each($('.flip-animation'), function() {
-    var $element = $(this);
-    var $parent = $element.parent().parent();
-    var elementHeight = $parent.outerHeight();
-    var elementTopPosition = $parent.offset().top;
-    var elementBottomPosition = (elementTopPosition + elementHeight);
+    $.each($('.flip-animation'), function() {
+      var $element = $(this);
+      var $parent = $element.parent().parent();
+      var elementHeight = $parent.outerHeight();
+      var elementTopPosition = $parent.offset().top;
+      var elementBottomPosition = (elementTopPosition + elementHeight);
 
-    if ((elementBottomPosition >= windowTopPosition) &&
-        (elementTopPosition <= windowBottomPosition)){
-      if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
-        $element.css('animation-delay', Math.floor((Math.random() * 600) + 100).toString()+"ms");
-        $element.addClass('animated flipInY');
+      if ((elementBottomPosition >= windowTopPosition) &&
+          (elementTopPosition <= windowBottomPosition)){
+        if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
+          $element.css('animation-delay', Math.floor((Math.random() * 600) + 100).toString()+"ms");
+          $element.addClass('animated flipInY');
+        }
+      } else {
+        if($element[0].className.split(/\s+/).indexOf('animated') >= 0) {
+          $element.removeClass('animated flipInY');
+        }
       }
-    } else {
-      if($element[0].className.split(/\s+/).indexOf('animated') >= 0) {
-        $element.removeClass('animated flipInY');
+    });
+
+    $.each($('.bounce-animation'), function() {
+      var $element = $(this);
+      var $parent = $element.parent().parent();
+      var elementHeight = $parent.outerHeight();
+      var elementTopPosition = $parent.offset().top;
+      var elementBottomPosition = (elementTopPosition + elementHeight);
+      //console.log($(this).parent());
+
+      if ((elementBottomPosition >= windowTopPosition) &&
+          (elementTopPosition <= windowBottomPosition)){
+        if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
+          $element.css('animation-delay', Math.floor((Math.random() * 600) + 100).toString()+"ms");
+          $element.addClass('animated bounceIn');
+        }
+      } else {
+        if($element[0].className.split(/\s+/).indexOf('animated') >= 0) {
+          $element.removeClass('animated bounceIn');
+        }
       }
-    }
-  });
+    });
 
-  $.each($('.bounce-animation'), function() {
-    var $element = $(this);
-    var $parent = $element.parent().parent();
-    var elementHeight = $parent.outerHeight();
-    var elementTopPosition = $parent.offset().top;
-    var elementBottomPosition = (elementTopPosition + elementHeight);
-    //console.log($(this).parent());
+    $.each($('.fade-animation'), function() {
+      var $element = $(this);
+      var $parent = $element.parent().parent();
+      var elementHeight = $parent.outerHeight();
+      var elementTopPosition = $parent.offset().top;
+      var elementBottomPosition = (elementTopPosition + elementHeight);
 
-    if ((elementBottomPosition >= windowTopPosition) &&
-        (elementTopPosition <= windowBottomPosition)){
-      if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
-        $element.css('animation-delay', Math.floor((Math.random() * 600) + 100).toString()+"ms");
-        $element.addClass('animated bounceIn');
+      if ((elementBottomPosition >= windowTopPosition) &&
+          (elementTopPosition <= windowBottomPosition)){
+         if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
+           $element.addClass('animated fadeIn');
+         }
+      } else {
+        if($element[0].className.split(/\s+/).indexOf('animated') >= 0) {
+          $element.removeClass('animated fadeIn');
+        }
       }
-    } else {
-      if($element[0].className.split(/\s+/).indexOf('animated') >= 0) {
-        $element.removeClass('animated bounceIn');
+    });
+
+    $.each($('.fadeLeft-animation'), function() {
+      var $element = $(this);
+      var $parent = $element.parent().parent();
+      var elementHeight = $parent.outerHeight();
+      var elementTopPosition = $parent.offset().top;
+      var elementBottomPosition = (elementTopPosition + elementHeight);
+
+      if ((elementBottomPosition >= windowTopPosition) &&
+          (elementTopPosition <= windowBottomPosition)){
+         if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
+           $element.addClass('animated fadeInLeft');
+         }
+      } else {
+        if($element[0].className.split(/\s+/).indexOf('animated') >= 0) {
+          $element.removeClass('animated fadeInLeft');
+        }
       }
-    }
-  });
+    });
 
-  $.each($('.fade-animation'), function() {
-    var $element = $(this);
-    var $parent = $element.parent().parent();
-    var elementHeight = $parent.outerHeight();
-    var elementTopPosition = $parent.offset().top;
-    var elementBottomPosition = (elementTopPosition + elementHeight);
+    $.each($('.fadeRight-animation'), function() {
+      var $element = $(this);
+      var $parent = $element.parent().parent();
+      var elementHeight = $parent.outerHeight();
+      var elementTopPosition = $parent.offset().top;
+      var elementBottomPosition = (elementTopPosition + elementHeight);
 
-    if ((elementBottomPosition >= windowTopPosition) &&
-        (elementTopPosition <= windowBottomPosition)){
-       if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
-         $element.addClass('animated fadeIn');
-       }
-    } else {
-      if($element[0].className.split(/\s+/).indexOf('animated') >= 0) {
-        $element.removeClass('animated fadeIn');
+      if ((elementBottomPosition >= windowTopPosition) &&
+          (elementTopPosition <= windowBottomPosition)){
+         if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
+           $element.addClass('animated fadeInRight');
+         }
+      } else {
+        if($element[0].className.split(/\s+/).indexOf('animated') >= 0) {
+          $element.removeClass('animated fadeInRight');
+        }
       }
-    }
-  });
-
-  $.each($('.fadeLeft-animation'), function() {
-    var $element = $(this);
-    var $parent = $element.parent().parent();
-    var elementHeight = $parent.outerHeight();
-    var elementTopPosition = $parent.offset().top;
-    var elementBottomPosition = (elementTopPosition + elementHeight);
-
-    if ((elementBottomPosition >= windowTopPosition) &&
-        (elementTopPosition <= windowBottomPosition)){
-       if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
-         $element.addClass('animated fadeInLeft');
-       }
-    } else {
-      if($element[0].className.split(/\s+/).indexOf('animated') >= 0) {
-        $element.removeClass('animated fadeInLeft');
-      }
-    }
-  });
-
-  $.each($('.fadeRight-animation'), function() {
-    var $element = $(this);
-    var $parent = $element.parent().parent();
-    var elementHeight = $parent.outerHeight();
-    var elementTopPosition = $parent.offset().top;
-    var elementBottomPosition = (elementTopPosition + elementHeight);
-
-    if ((elementBottomPosition >= windowTopPosition) &&
-        (elementTopPosition <= windowBottomPosition)){
-       if($element[0].className.split(/\s+/).indexOf('animated') < 0) {
-         $element.addClass('animated fadeInRight');
-       }
-    } else {
-      if($element[0].className.split(/\s+/).indexOf('animated') >= 0) {
-        $element.removeClass('animated fadeInRight');
-      }
-    }
-  });
+    });
+  };
 }
