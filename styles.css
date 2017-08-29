@@ -258,6 +258,14 @@ min-height: 100vh;
   margin-left: 20px;
 }
 
+#projects .test {
+  margin-top: 20px;
+}
+
+#projects .test span {
+  font-weight: 900;
+}
+
 #projects .more {
   margin-top: 100px;
   font-weight: 900;
